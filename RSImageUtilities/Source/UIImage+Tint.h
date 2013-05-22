@@ -38,8 +38,4 @@
 
 - (UIImage *)imageWithGradient:(NSArray *)colors;
 
-//Socialist features
-
-+ (UIImage *)emptyImageWithColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor size:(CGSize)size;
-+ (UIImage *)avatarImageWithColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor size:(CGSize)size;
 @end

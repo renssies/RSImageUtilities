@@ -394,46 +394,4 @@
     return newImage;
 }
 
-//Socialist features
-
-+ (UIImage *)emptyImageWithColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor size:(CGSize)size {
-    UIImage *icon = [UIImage imageNamed:@"icon-picture-mini.png"];
-    CGFloat smallest = size.height;
-    if(size.width < size.height) {
-        smallest = size.width;
-    }
-    if(smallest >= 34 &&  smallest < 42) {
-        icon = [UIImage imageNamed:@"icon-picture-small.png"];
-    } else if(smallest >= 42 &&  smallest < 58) {
-        icon = [UIImage imageNamed:@"icon-picture-medium.png"];
-    } else if(size.height >= 58 && smallest < 74) {
-        icon = [UIImage imageNamed:@"icon-picture-large.png"];
-    } else if(size.height >= 74) {
-        icon = [UIImage imageNamed:@"icon-picture-jumbo.png"];
-    }
-    UIImage *tintedIcon = [icon imageTintedWithColor:color];
-    
-    return [tintedIcon imageCenteredInSize:size backgroundColor:backgroundColor];
-}
-
-+ (UIImage *)avatarImageWithColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor size:(CGSize)size {
-    UIImage *icon = [UIImage imageNamed:@"icon-person-mini.png"];
-    CGFloat smallest = size.height;
-    if(size.width < size.height) {
-        smallest = size.width;
-    }
-    if(smallest >= 34 &&  smallest < 42) {
-        icon = [UIImage imageNamed:@"icon-person-small.png"];
-    } else if(smallest >= 42 &&  smallest < 58) {
-        icon = [UIImage imageNamed:@"icon-person-medium.png"];
-    } else if(size.height >= 58 && smallest < 74) {
-        icon = [UIImage imageNamed:@"icon-person-large.png"];
-    } else if(size.height >= 74) {
-        icon = [UIImage imageNamed:@"icon-person-jumbo.png"];
-    }
-    UIImage *tintedIcon = [icon imageTintedWithColor:color];
-    
-    return [tintedIcon imageCenteredInSize:size backgroundColor:backgroundColor];
-}
-
 @end
