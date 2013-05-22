@@ -7,7 +7,7 @@
 //
 
 #import "RSViewController.h"
-#import "MGImageUtilities.h"
+#import "RSImageUtilities.h"
 
 @interface RSViewController ()
 
@@ -29,7 +29,7 @@
 }
 
 - (IBAction)person:(id)sender {
-    UIImage *person = [UIImage imageNamed:@"icon-person-jumbo.png"];
+    UIImage *person = [UIImage imageNamed:@"icon-person.png"];
     [_imageView setImage:person];
 }
 
