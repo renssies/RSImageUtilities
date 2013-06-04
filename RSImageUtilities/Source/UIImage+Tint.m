@@ -379,6 +379,8 @@
     CGContextTranslateCTM(context, 0.0f, self.size.height);
     CGContextScaleCTM(context, 1.0f, -1.0f);
     
+    CGContextDrawImage(context, rect, self.CGImage);
+    
     CGContextClipToMask(context,rect, self.CGImage);
     CGContextDrawLinearGradient(context, gradient, endPoint, startPoint, 0);
     
