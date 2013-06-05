@@ -23,7 +23,7 @@
 - (UIImage *)imageWithRoundedCorners:(UIRectCorner)corners radii:(CGSize)radii;
 - (UIImage *)imageForWidth:(CGFloat)width;
 
-- (UIImage *)imageInRect:(CGRect)rect
+- (UIImage *)imageInRect:(CGRect)rect;
 
 - (UIImage *)imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color;
 
