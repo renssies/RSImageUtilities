@@ -23,6 +23,8 @@
 - (UIImage *)imageWithRoundedCorners:(UIRectCorner)corners radii:(CGSize)radii;
 - (UIImage *)imageForWidth:(CGFloat)width;
 
+- (UIImage *)imageInRect:(CGRect)rect
+
 - (UIImage *)imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color;
 
 - (NSArray *)getRGBAsAtPoint:(CGPoint)point count:(int)count;

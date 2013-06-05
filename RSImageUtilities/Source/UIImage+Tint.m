@@ -173,6 +173,17 @@
     return newImage;
 }
 
+-(UIImage *)imageInRect:(CGRect)rect {
+    CGRect imageRect = rect;
+    if([[UIScreen mainScreen] scale] != 1.0) {
+        imageRect.origin.x = imageRect.origin.x*[[UIScreen mainScreen] scale];
+        imageRect.origin.y = imageRect.origin.y*[[UIScreen mainScreen] scale];
+        imageRect.size.width = imageRect.size.width*[[UIScreen mainScreen] scale];
+        imageRect.size.height = imageRect.size.height*[[UIScreen mainScreen] scale];
+    }
+    return [UIImage imageWithCGImage:CGImageCreateWithImageInRect( [self CGImage] , imageRect )];
+}
+
 //Image centered
 
 -(UIImage *)imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color {
