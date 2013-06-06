@@ -285,7 +285,7 @@
     
     CGSize maskImageSize = maskImage.size;
     UIImage *targetImage = [UIImage createImageWithSize:maskImageSize color:color];
-    CGRect imageRect = CGRectMake(1, 1, maskImageSize.width, maskImageSize.height);
+    CGRect imageRect = CGRectMake(0, 0, maskImageSize.width, maskImageSize.height);
     
     CGContextRef oldContext = UIGraphicsGetCurrentContext();
     CGContextSaveGState(oldContext);
