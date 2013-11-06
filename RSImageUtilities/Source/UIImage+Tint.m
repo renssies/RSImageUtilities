@@ -23,10 +23,9 @@
 {
 	if (color) {
 		// Construct new image the same size as this one.
-		UIImage *image;
+		UIImage *image = nil;
         
-		
-        UIGraphicsBeginImageContextWithOptions([self size], NO, 0.f); // 0.f for scale means "scale for device's main screen".
+		UIGraphicsBeginImageContextWithOptions([self size], NO, 0.f); // 0.f for scale means "scale for device's main screen".
 		CGRect rect = CGRectZero;
 		rect.size = [self size];
 		
@@ -85,7 +84,7 @@
     }
     
     CGColorSpaceRef colourSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef shadowContext = CGBitmapContextCreate(NULL, width, height, CGImageGetBitsPerComponent(self.CGImage), 0, colourSpace, kCGImageAlphaPremultipliedLast);
+    CGContextRef shadowContext = CGBitmapContextCreate(NULL, width, height, CGImageGetBitsPerComponent(self.CGImage), 0, colourSpace, (kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedFirst));
     
     CGContextScaleCTM(shadowContext, scaleFactor, scaleFactor);
     

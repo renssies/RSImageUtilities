@@ -29,8 +29,13 @@
 }
 
 - (IBAction)person:(id)sender {
-    UIImage *person = [UIImage imageNamed:@"icon-person.png"];
+    UIImage *person = [UIImage imageNamed:@"icon-person"];
     [_imageView setImage:person];
+}
+
+- (IBAction)blackImage:(id)sender {
+    UIImage *image = [UIImage createBlackImageWithSize:_imageView.bounds.size];
+    [_imageView setImage:image];
 }
 
 - (IBAction)centerOnBackground:(id)sender {
@@ -39,20 +44,9 @@
     [_imageView setImage:image];
 }
 
-- (IBAction)blackImage:(id)sender {
-    UIImage *image = [UIImage createBlackImageWithSize:_imageView.bounds.size];
-    [_imageView setImage:image];
-}
-
 - (IBAction)shadow:(id)sender {
     UIImage *image = [_imageView image];
     image = [image imageWithShadow:CGSizeMake(0, 0) blur:10 color:[UIColor darkGrayColor]];
-    [_imageView setImage:image];
-}
-
-- (IBAction)innerShadow:(id)sender {
-    UIImage *image = [_imageView image];
-    image = [image imageWithInnerShadowColor:[UIColor colorWithWhite:0 alpha:0.5f] blur:2 offset:CGSizeMake(0, 0) maskColor:self.view.backgroundColor];
     [_imageView setImage:image];
 }
 
@@ -65,6 +59,12 @@
 - (IBAction)tint:(id)sender {
     UIImage *image = [_imageView image];
     image = [image imageTintedWithColor:[UIColor greenColor]];
+    [_imageView setImage:image];
+}
+
+- (IBAction)innerShadow:(id)sender {
+    UIImage *image = [_imageView image];
+    image = [image imageWithInnerShadowColor:[UIColor colorWithWhite:0 alpha:0.5f] blur:2 offset:CGSizeMake(0, 0) maskColor:self.view.backgroundColor];
     [_imageView setImage:image];
 }
 

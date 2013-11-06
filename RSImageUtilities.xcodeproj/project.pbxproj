@@ -13,15 +13,11 @@
 		0C15CA2517451E2500068B1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA2317451E2500068B1F /* InfoPlist.strings */; };
 		0C15CA2717451E2500068B1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C15CA2617451E2500068B1F /* main.m */; };
 		0C15CA2B17451E2500068B1F /* RSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C15CA2A17451E2500068B1F /* RSAppDelegate.m */; };
-		0C15CA2D17451E2500068B1F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA2C17451E2500068B1F /* Default.png */; };
-		0C15CA2F17451E2500068B1F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA2E17451E2500068B1F /* Default@2x.png */; };
-		0C15CA3117451E2500068B1F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA3017451E2500068B1F /* Default-568h@2x.png */; };
 		0C15CA3417451E2500068B1F /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C15CA3317451E2500068B1F /* RSViewController.m */; };
 		0C15CA3717451E2500068B1F /* RSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA3517451E2500068B1F /* RSViewController.xib */; };
-		0C15CA3F17451FB200068B1F /* icon-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA3D17451FB200068B1F /* icon-person.png */; };
-		0C15CA4017451FB200068B1F /* icon-person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C15CA3E17451FB200068B1F /* icon-person@2x.png */; };
 		0C7669DF174D05AA008B4F80 /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7669DC174D05AA008B4F80 /* UIImage+ProportionalFill.m */; };
 		0C7669E0174D05AA008B4F80 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7669DE174D05AA008B4F80 /* UIImage+Tint.m */; };
+		0CF35B91182A52910018E0A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF35B90182A52910018E0A9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,19 +31,15 @@
 		0C15CA2817451E2500068B1F /* RSImageUtilities-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSImageUtilities-Prefix.pch"; sourceTree = "<group>"; };
 		0C15CA2917451E2500068B1F /* RSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAppDelegate.h; sourceTree = "<group>"; };
 		0C15CA2A17451E2500068B1F /* RSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAppDelegate.m; sourceTree = "<group>"; };
-		0C15CA2C17451E2500068B1F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0C15CA2E17451E2500068B1F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		0C15CA3017451E2500068B1F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0C15CA3217451E2500068B1F /* RSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSViewController.h; sourceTree = "<group>"; };
 		0C15CA3317451E2500068B1F /* RSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSViewController.m; sourceTree = "<group>"; };
 		0C15CA3617451E2500068B1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RSViewController.xib; sourceTree = "<group>"; };
-		0C15CA3D17451FB200068B1F /* icon-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-person.png"; sourceTree = "<group>"; };
-		0C15CA3E17451FB200068B1F /* icon-person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-person@2x.png"; sourceTree = "<group>"; };
 		0C7669DA174D05AA008B4F80 /* RSImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSImageUtilities.h; sourceTree = "<group>"; };
 		0C7669DB174D05AA008B4F80 /* UIImage+ProportionalFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ProportionalFill.h"; sourceTree = "<group>"; };
 		0C7669DC174D05AA008B4F80 /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
 		0C7669DD174D05AA008B4F80 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		0C7669DE174D05AA008B4F80 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		0CF35B90182A52910018E0A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +92,7 @@
 				0C15CA3217451E2500068B1F /* RSViewController.h */,
 				0C15CA3317451E2500068B1F /* RSViewController.m */,
 				0C15CA3517451E2500068B1F /* RSViewController.xib */,
-				0C15CA3D17451FB200068B1F /* icon-person.png */,
-				0C15CA3E17451FB200068B1F /* icon-person@2x.png */,
+				0CF35B90182A52910018E0A9 /* Images.xcassets */,
 				0C15CA2117451E2500068B1F /* Supporting Files */,
 			);
 			path = RSImageUtilities;
@@ -114,9 +105,6 @@
 				0C15CA2317451E2500068B1F /* InfoPlist.strings */,
 				0C15CA2617451E2500068B1F /* main.m */,
 				0C15CA2817451E2500068B1F /* RSImageUtilities-Prefix.pch */,
-				0C15CA2C17451E2500068B1F /* Default.png */,
-				0C15CA2E17451E2500068B1F /* Default@2x.png */,
-				0C15CA3017451E2500068B1F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,12 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C15CA2517451E2500068B1F /* InfoPlist.strings in Resources */,
-				0C15CA2D17451E2500068B1F /* Default.png in Resources */,
-				0C15CA2F17451E2500068B1F /* Default@2x.png in Resources */,
-				0C15CA3117451E2500068B1F /* Default-568h@2x.png in Resources */,
+				0CF35B91182A52910018E0A9 /* Images.xcassets in Resources */,
 				0C15CA3717451E2500068B1F /* RSViewController.xib in Resources */,
-				0C15CA3F17451FB200068B1F /* icon-person.png in Resources */,
-				0C15CA4017451FB200068B1F /* icon-person@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +275,9 @@
 		0C15CA3B17451E2500068B1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSImageUtilities/RSImageUtilities-Prefix.pch";
 				INFOPLIST_FILE = "RSImageUtilities/RSImageUtilities-Info.plist";
@@ -302,6 +289,9 @@
 		0C15CA3C17451E2500068B1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSImageUtilities/RSImageUtilities-Prefix.pch";
 				INFOPLIST_FILE = "RSImageUtilities/RSImageUtilities-Info.plist";
