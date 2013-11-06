@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'RSImageUtilities'
-  s.version  = ‘0.1.8’
+  s.version  = '0.1.8'
   s.license  = 'BSD'
   s.summary  = 'UIImage categories based on MGImageUtilities.'
   s.homepage = 'https://github.com/renssies/RSImageUtilities'
