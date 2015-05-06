@@ -34,37 +34,37 @@
 }
 
 - (IBAction)blackImage:(id)sender {
-    UIImage *image = [UIImage createBlackImageWithSize:_imageView.bounds.size];
+    UIImage *image = [UIImage rs_createBlackImageWithSize:_imageView.bounds.size];
     [_imageView setImage:image];
 }
 
 - (IBAction)centerOnBackground:(id)sender {
     UIImage *image = [_imageView image];
-    image = [image imageCenteredInSize:_imageView.bounds.size backgroundColor:[UIColor brownColor]];
+    image = [image rs_imageCenteredInSize:_imageView.bounds.size backgroundColor:[UIColor brownColor]];
     [_imageView setImage:image];
 }
 
 - (IBAction)shadow:(id)sender {
     UIImage *image = [_imageView image];
-    image = [image imageWithShadow:CGSizeMake(0, 0) blur:10 color:[UIColor darkGrayColor]];
+    image = [image rs_imageWithShadow:CGSizeMake(0, 0) blur:10 color:[UIColor darkGrayColor]];
     [_imageView setImage:image];
 }
 
 - (IBAction)gradient:(id)sender {
     UIImage *image = [_imageView image];
-    image = [image imageWithGradient:@[[UIColor greenColor],[UIColor blueColor]]];
+    image = [image rs_imageWithGradient:@[[UIColor greenColor],[UIColor blueColor]]];
     [_imageView setImage:image];
 }
 
 - (IBAction)tint:(id)sender {
     UIImage *image = [_imageView image];
-    image = [image imageTintedWithColor:[UIColor greenColor]];
+    image = [image rs_imageTintedWithColor:[UIColor greenColor]];
     [_imageView setImage:image];
 }
 
 - (IBAction)innerShadow:(id)sender {
     UIImage *image = [_imageView image];
-    image = [image imageWithInnerShadowColor:[UIColor colorWithWhite:0 alpha:0.5f] blur:2 offset:CGSizeMake(0, 0) maskColor:self.view.backgroundColor];
+    image = [image rs_imageWithInnerShadowColor:[UIColor colorWithWhite:0 alpha:0.5f] blur:2 offset:CGSizeMake(0, 0) maskColor:self.view.backgroundColor];
     [_imageView setImage:image];
 }
 

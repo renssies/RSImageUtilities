@@ -12,14 +12,14 @@
 
 //Tinting images
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color
 {
 	// This method is designed for use with template images, i.e. solid-coloured mask-like images.
-	return [self imageTintedWithColor:color fraction:0.0]; // default to a fully tinted mask of the image.
+	return [self rs_imageTintedWithColor:color fraction:0.0]; // default to a fully tinted mask of the image.
 }
 
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color fraction:(CGFloat)fraction
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color fraction:(CGFloat)fraction
 {
 	if (color) {
 		// Construct new image the same size as this one.
@@ -53,15 +53,15 @@
 
 //Adding dropshadows to images
 
-- (UIImage *)imageWithShadow:(CGSize)shadow {
-    return [self imageWithShadow:shadow blur:2];
+- (UIImage *)rs_imageWithShadow:(CGSize)shadow {
+    return [self rs_imageWithShadow:shadow blur:2];
 }
 
-- (UIImage *)imageWithShadow:(CGSize)shadow blur:(CGFloat)blur {
-    return [self imageWithShadow:shadow blur:blur color:[UIColor blackColor]];
+- (UIImage *)rs_imageWithShadow:(CGSize)shadow blur:(CGFloat)blur {
+    return [self rs_imageWithShadow:shadow blur:blur color:[UIColor blackColor]];
 }
 
-- (UIImage *)imageWithShadow:(CGSize)shadow blur:(CGFloat)blur color:(UIColor *)color {
+- (UIImage *)rs_imageWithShadow:(CGSize)shadow blur:(CGFloat)blur color:(UIColor *)color {
     float scaleFactor = [[UIScreen mainScreen] scale];
     
     if(scaleFactor > 1.0) {
@@ -81,6 +81,10 @@
     if(shadow.height < 0) {
         y = ((shadow.height*-1)/scaleFactor)+(blur/2);
         height =(self.size.height*scaleFactor)+(shadow.height*-1)+(blur*2);
+    }
+    
+    if (width <= 0 && height <= 0) {
+        return nil;
     }
     
     CGColorSpaceRef colourSpace = CGColorSpaceCreateDeviceRGB();
@@ -104,23 +108,23 @@
 
 //Combining tinting and adding shadows
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow {
-    UIImage *image = [self imageTintedWithColor:color fraction:0.0];
-    return [image imageWithShadow:CGSizeMake(0, -1) blur:2];
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow {
+    UIImage *image = [self rs_imageTintedWithColor:color fraction:0.0];
+    return [image rs_imageWithShadow:CGSizeMake(0, -1) blur:2];
 }
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow shadowColor:(UIColor *)shadowColor {
-    UIImage *image = [self imageTintedWithColor:color fraction:0.0];
-    return [image imageWithShadow:CGSizeMake(0, -1) blur:2 color:shadowColor];
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow shadowColor:(UIColor *)shadowColor {
+    UIImage *image = [self rs_imageTintedWithColor:color fraction:0.0];
+    return [image rs_imageWithShadow:CGSizeMake(0, -1) blur:2 color:shadowColor];
 }
 
 //Adding rounded corners
 
-- (UIImage *)imageWithRoundedCorners:(CGFloat)radius {
-    return [self imageWithRoundedCorners:UIRectCornerAllCorners radii:CGSizeMake(radius, radius)];
+- (UIImage *)rs_imageWithRoundedCorners:(CGFloat)radius {
+    return [self rs_imageWithRoundedCorners:UIRectCornerAllCorners radii:CGSizeMake(radius, radius)];
 }
 
-- (UIImage *)imageWithRoundedCorners:(UIRectCorner)corners radii:(CGSize)radii {
+- (UIImage *)rs_imageWithRoundedCorners:(UIRectCorner)corners radii:(CGSize)radii {
     // Get your image somehow
     UIImage *newImage = nil;
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
@@ -145,7 +149,7 @@
 
 //Creating image for a certain width
 
-- (UIImage *)imageForWidth:(CGFloat)width {
+- (UIImage *)rs_imageForWidth:(CGFloat)width {
     // Get your image somehow
     UIImage *newImage = nil;
     CGRect rect = CGRectMake(0, 0, width, self.size.height);
@@ -165,7 +169,7 @@
     return newImage;
 }
 
--(UIImage *)imageInRect:(CGRect)rect {
+-(UIImage *)rs_imageInRect:(CGRect)rect {
     CGRect imageRect = rect;
     if([[UIScreen mainScreen] scale] != 1.0) {
         imageRect.origin.x = imageRect.origin.x*[[UIScreen mainScreen] scale];
@@ -178,9 +182,9 @@
 
 //Image centered
 
--(UIImage *)imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color {
+-(UIImage *)rs_imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color {
     if (!color) {
-        color = [[self getRGBAsAtPoint:CGPointMake(0, 0) count:1] objectAtIndex:0];
+        color = [[self rs_getRGBAsAtPoint:CGPointMake(0, 0) count:1] objectAtIndex:0];
     }
     // Get your image somehow
     UIImage *newImage = nil;
@@ -209,7 +213,7 @@
 
 //Get RGB value at cerain point in images (WARNING: Heavy code, only use when needed)
 
-- (NSArray *)getRGBAsAtPoint:(CGPoint)point count:(int)count
+- (NSArray *)rs_getRGBAsAtPoint:(CGPoint)point count:(int)count
 {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:count];
     
@@ -251,17 +255,17 @@
 
 //Creating a black image
 
-+ (UIImage *)createBlackImageWithSize:(CGSize)size
++ (UIImage *)rs_createBlackImageWithSize:(CGSize)size
 {
-    return [self createImageWithSize:size color:[UIColor blackColor]];
+    return [self rs_createImageWithSize:size color:[UIColor blackColor]];
 }
 
-+ (UIImage *)createWhiteImageWithSize:(CGSize)size
++ (UIImage *)rs_createWhiteImageWithSize:(CGSize)size
 {
-    return [self createImageWithSize:size color:[UIColor whiteColor]];
+    return [self rs_createImageWithSize:size color:[UIColor whiteColor]];
 }
 
-+ (UIImage *)createImageWithSize:(CGSize)size color:(UIColor *)color
++ (UIImage *)rs_createImageWithSize:(CGSize)size color:(UIColor *)color
 {
     UIGraphicsBeginImageContext(size);
     CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext(), color.CGColor);
@@ -276,7 +280,7 @@
 - (UIImage*) createInvertMask:(UIImage *)maskImage color:(UIColor *)color {
     
     CGSize maskImageSize = maskImage.size;
-    UIImage *targetImage = [UIImage createImageWithSize:maskImageSize color:color];
+    UIImage *targetImage = [UIImage rs_createImageWithSize:maskImageSize color:color];
     CGRect imageRect = CGRectMake(0, 0, maskImageSize.width, maskImageSize.height);
     
     CGContextRef oldContext = UIGraphicsGetCurrentContext();
@@ -303,19 +307,19 @@
 
 //Adding inner shadows to images
 
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color {
-    return [self imageWithInnerShadowColor:color blur:5];
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color {
+    return [self rs_imageWithInnerShadowColor:color blur:5];
 }
 
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur {
-    return [self imageWithInnerShadowColor:color blur:blur offset:CGSizeMake(0, 0)];
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur {
+    return [self rs_imageWithInnerShadowColor:color blur:blur offset:CGSizeMake(0, 0)];
 }
 
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset {
-    return [self imageWithInnerShadowColor:color blur:blur offset:offset maskColor:[UIColor whiteColor]];
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset {
+    return [self rs_imageWithInnerShadowColor:color blur:blur offset:offset maskColor:[UIColor whiteColor]];
 }
 
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset maskColor:(UIColor *)maskColor {
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset maskColor:(UIColor *)maskColor {
     if(color) {
         // Construct new image the same size as this one.
         UIImage *image;
@@ -356,7 +360,7 @@
 
 //Adding gradients to images
 
-- (UIImage *)imageWithGradient:(NSArray *)colors {
+- (UIImage *)rs_imageWithGradient:(NSArray *)colors {
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     NSMutableArray *gradientColors = [NSMutableArray array];

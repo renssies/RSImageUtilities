@@ -9,35 +9,35 @@
 
 @interface UIImage (MGTint)
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color;
-- (UIImage *)imageTintedWithColor:(UIColor *)color fraction:(CGFloat)fraction;
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color;
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color fraction:(CGFloat)fraction;
 
-- (UIImage *)imageWithShadow:(CGSize)shadow;
-- (UIImage *)imageWithShadow:(CGSize)shadow blur:(CGFloat)blur;
-- (UIImage *)imageWithShadow:(CGSize)shadow blur:(CGFloat)blur color:(UIColor *)color;
+- (UIImage *)rs_imageWithShadow:(CGSize)shadow;
+- (UIImage *)rs_imageWithShadow:(CGSize)shadow blur:(CGFloat)blur;
+- (UIImage *)rs_imageWithShadow:(CGSize)shadow blur:(CGFloat)blur color:(UIColor *)color;
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow;
-- (UIImage *)imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow shadowColor:(UIColor *)shadowColor;
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow;
+- (UIImage *)rs_imageTintedWithColor:(UIColor *)color shadow:(CGSize)shadow shadowColor:(UIColor *)shadowColor;
 
-- (UIImage *)imageWithRoundedCorners:(CGFloat)radius;
-- (UIImage *)imageWithRoundedCorners:(UIRectCorner)corners radii:(CGSize)radii;
-- (UIImage *)imageForWidth:(CGFloat)width;
+- (UIImage *)rs_imageWithRoundedCorners:(CGFloat)radius;
+- (UIImage *)rs_imageWithRoundedCorners:(UIRectCorner)corners radii:(CGSize)radii;
+- (UIImage *)rs_imageForWidth:(CGFloat)width;
 
-- (UIImage *)imageInRect:(CGRect)rect;
+- (UIImage *)rs_imageInRect:(CGRect)rect;
 
-- (UIImage *)imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color;
+- (UIImage *)rs_imageCenteredInSize:(CGSize)size backgroundColor:(UIColor *)color;
 
-- (NSArray *)getRGBAsAtPoint:(CGPoint)point count:(int)count;
+- (NSArray *)rs_getRGBAsAtPoint:(CGPoint)point count:(int)count;
 
-+ (UIImage *)createBlackImageWithSize:(CGSize)size;
-+ (UIImage *)createWhiteImageWithSize:(CGSize)size;
-+ (UIImage *)createImageWithSize:(CGSize)size color:(UIColor *)color;
++ (UIImage *)rs_createBlackImageWithSize:(CGSize)size;
++ (UIImage *)rs_createWhiteImageWithSize:(CGSize)size;
++ (UIImage *)rs_createImageWithSize:(CGSize)size color:(UIColor *)color;
 
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color;
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur;
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset;
-- (UIImage *)imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset maskColor:(UIColor *)maskColor;
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color;
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur;
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset;
+- (UIImage *)rs_imageWithInnerShadowColor:(UIColor *)color blur:(CGFloat)blur offset:(CGSize)offset maskColor:(UIColor *)maskColor;
 
-- (UIImage *)imageWithGradient:(NSArray *)colors;
+- (UIImage *)rs_imageWithGradient:(NSArray *)colors;
 
 @end

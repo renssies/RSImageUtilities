@@ -10,29 +10,29 @@
 	<string>RSImageUtilities</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D1BE555B-2286-437D-B4E6-999B0731ECF5</key>
-		<string>ssh://github.com/renssies/RSImageUtilities.git</string>
+		<key>483543DE40E23A3624AA5C0835F0FDA55700B628</key>
+		<string>github.com:renssies/RSImageUtilities.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RSImageUtilities.xcodeproj/project.xcworkspace</string>
+	<string>RSImageUtilities.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D1BE555B-2286-437D-B4E6-999B0731ECF5</key>
+		<key>483543DE40E23A3624AA5C0835F0FDA55700B628</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/renssies/RSImageUtilities.git</string>
+	<string>github.com:renssies/RSImageUtilities.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D1BE555B-2286-437D-B4E6-999B0731ECF5</string>
+	<string>483543DE40E23A3624AA5C0835F0FDA55700B628</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D1BE555B-2286-437D-B4E6-999B0731ECF5</string>
+			<string>483543DE40E23A3624AA5C0835F0FDA55700B628</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RSImageUtilities</string>
 		</dict>
